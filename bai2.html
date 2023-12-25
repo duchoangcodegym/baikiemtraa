@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chan le nang cao</title>
+</head>
+
+<body>
+    <input type="" id="ngay">
+    <button onclick="onli()">Xem kết quả</button>
+    <script>
+        var H = [];
+        var T = [];
+
+        function onli() {
+            var a = + document.getElementById('ngay').value;
+
+            if (a <= 31) {
+                for (i = 0; i <= a; i++) {
+                    if (i % 2 == 0) {
+                        H.push(i);
+                    } else {
+                        T.push(i);
+                    }
+                }
+
+                if (a % 2 == 0) {
+                    document.write(H)
+                } else {
+                    document.write(T)
+                }
+            } else {
+                alert('Hãy nhập ngày  sinh của  bạn')
+            }
+        }
+    </script>
+</body>
+
+</html>
